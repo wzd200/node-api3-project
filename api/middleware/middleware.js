@@ -31,6 +31,7 @@ function validateUser(req, res, next) {
       message: 'missing required name field'
     })
   } else {
+    req.name = req.body.name
     next()
   }
 }
