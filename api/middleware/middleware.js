@@ -11,7 +11,7 @@ async function validateUserId(req, res, next) {
     console.log(`the id is ${id}`)
     const user = await User.getById(id)
     if (user) {
-      req.hub = user
+      req.user = user
       next()
     } else {
       next({
